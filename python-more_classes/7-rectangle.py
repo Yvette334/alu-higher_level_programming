@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """this represents a rectangle"""
+    """represent a rectangle"""
     number_of_instances = 0
     print_symbol = "#"
 
@@ -22,7 +22,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """retrieves width attribute"""
+        """return width attribute"""
         return self.__width
 
     @width.setter
@@ -36,7 +36,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """retrieves height attribute"""
+        """return height attribute"""
         return self.__height
 
     @height.setter

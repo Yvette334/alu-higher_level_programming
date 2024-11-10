@@ -5,11 +5,11 @@
 class Student:
     """Represent a student."""
 
-    def __init__(self, fname, lname, age):
+    def __init__(self, first_name, last_name, age):
         """Initializes a new Student
         """
-        self.first_name = fname
-        self.last_name = lname
+        self.first_name =first_name
+        self.last_name = last_name
         self.age = age
 
     def to_json(self):

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Fetches https://alx-intranet.hbtn.io/status."""
 import urllib.request
 
 if __name__ == "__main__":
@@ -15,4 +16,3 @@ if __name__ == "__main__":
             print("\t- type: {}".format(type(body)))
             print("\t- content: {}".format(body))
             print("\t- utf8 content: {}".format(body.decode("utf-8")))
-

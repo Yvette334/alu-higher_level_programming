@@ -15,20 +15,19 @@ if __name__ == "__main__":
     user = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
+    state = sys.argv[4]
 
     db = MySQLdb.connect(host="localhost", user=user,
                          passwd=password, db=db_name)
 
     cursor = db.cursor()
     cursor.execute(
-        """select cities.id, cities.name, states.name
-        from cities join states on cities.state_id = states.id
-        order by cities.id asc"""
+        f"""select name from cities where
+        state_id=(select id from states where name='{state}')"""
     )
     rows = cursor.fetchall()
 
     if rows is not None:
-        for row in rows:
-            print(row)
+        print(", ".join([row[0] for row in rows]))
     cursor.close()
     db.close()

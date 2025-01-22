@@ -4,4 +4,5 @@ exports.esrever = function (list) {
   for (const i of list) {
     revs.unshift(i);
   }
+  return revs;
 };
